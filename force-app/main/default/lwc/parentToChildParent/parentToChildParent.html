@@ -1,0 +1,28 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="6"> 
+            <lightning-card  title="親">
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-input type="text" label="age" placeholder="ageを入れてください" onchange={changeAgeHandler}>></lightning-input>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-button variant="brand" label="changeNameFixed 実行" onclick={changeNameFixedHandler} ></lightning-button>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-button variant="brand" label="changeName 実行" onclick={changeNameHandler} ></lightning-button>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-button variant="brand" label="(get) hisName 実行" onclick={hisNameHandler} ></lightning-button>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    子の名前 : {name}
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item size="6"> 
+            <lightning-card  title="子">
+                <c-Parent-to-child-child age={age}></c-Parent-to-child-child> 
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
